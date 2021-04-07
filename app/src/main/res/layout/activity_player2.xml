@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="14"
+    android:background="#E9EDF0"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:weightSum="8"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/back_btn_id"
+        android:padding="10dp"
+        android:drawableStart="@drawable/back_btn"
+        android:background="#E9EDF0"
+        android:layout_margin="5dp"
+        android:layout_height="match_parent"
+        ></TextView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:fontFamily="@font/open_sans_light"
+        android:gravity="center"
+
+        android:text="NOW PLAYING"
+        android:textColor="#000000"
+        android:textSize="14dp"></TextView>
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:id="@+id/search_Btn">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:id="@+id/menu_btn_id"
+        android:paddingRight="15dp"
+        android:gravity="center"
+
+        android:background="#E9EDF0"
+        android:layout_margin="5dp"
+
+        ></TextView>
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="6.5"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.00"
+            android:layout_centerInParent="true"
+           android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:id="@+id/txtStop"
+            android:textSize="10dp"
+
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.00"
+            android:id="@+id/txtStart"
+            android:textSize="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+
+            ></TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:innerRadius="0dp"
+            android:layout_marginBottom="35dp"
+            android:shape="ring"
+            android:thicknessRatio="2"
+            >
+            <ImageView
+                android:layout_width="222dp"
+                android:layout_height="220dp"
+
+                android:src="@drawable/bg"
+                android:id="@+id/song_img"
+                android:scaleType="centerCrop"
+
+
+                ></ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.marcinmoskala.arcseekbar.ArcSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundEdges="true"
+            android:rotationY="180"
+            android:id="@+id/seekbar_id"
+            android:rotation="180"
+             android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="5dp"
+            android:layout_alignParentBottom="true"
+            app:progressColor="#E91E63"
+            app:thumb="@drawable/seekbar_point"></com.marcinmoskala.arcseekbar.ArcSeekBar>
+
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_fast_forward_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="30dp"
+            android:id="@+id/btnff"
+            ></Button>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_fast_rewind"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="30dp"
+            android:id="@+id/btnfr"
+            ></Button>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="13dp"
+        android:text="Bon Jovi - Janie, Don't Take Your Love To Town"
+        android:id="@+id/txtsn"
+        android:textAlignment="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        ></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+
+        android:weightSum="3"
+        >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/btnPrev"
+        android:layout_margin="10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back_ic"
+            ></ImageView>
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:id="@+id/playButton"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/pause_ic"
+                android:id="@+id/pus_icon_ic"
+                ></ImageView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/btnNext"
+            android:layout_margin="10dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/forwd_ic"
+                ></ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UP NEXT"
+        android:padding="3dp"
+
+
+        android:textSize="12dp"
+        android:layout_marginLeft="15dp"
+        >
+
+    </TextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AA8D8D"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="13dp"
+        >
+
+    </View>
+
+    <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/blast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        custom:avDensity="0.5"
+        custom:avType="outline"
+        custom:avWidth="4dp"
+        custom:avColor="#FA0707"
+
+        custom:avSpeed="normal"/>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="14"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:weightSum="8"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/back_btn_id"
+            android:padding="10dp"
+           android:scaleType="centerCrop"
+            android:src="@drawable/icon_img"
+            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            ></ImageView>
+
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center"
+
+            android:id="@+id/search_Btn">
+
+        </androidx.appcompat.widget.SearchView>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/menu_btn_id"
+            android:paddingRight="15dp"
+            android:gravity="center"
+
+            android:layout_margin="5dp"
+
+            ></ImageView>
+    </LinearLayout>
+<ListView
+    android:id="@+id/listView"
+    android:dividerHeight="1.2sp"
+
+    android:divider="#E9EDF0"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="13"/>
+
+</LinearLayout>
