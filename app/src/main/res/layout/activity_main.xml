@@ -7,58 +7,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:weightSum="14"
     tools:context=".MainActivity">
-    <LinearLayout
+
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".8"
-        android:weightSum="8"
-        android:layout_margin="5dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/back_btn_id"
-            android:padding="10dp"
-           android:scaleType="centerCrop"
-            android:src="@drawable/icon_img"
-            android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:id="@+id/drawer_layout"
+        android:layout_height="match_parent"
+
+        tools:openDrawer="start"
+        tools:context=".Activity.MainActivity">
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            ></ImageView>
+            android:id="@+id/nav_view"
+            app:headerLayout="@layout/header"
+            app:menu="@menu/menu"
+            android:layout_gravity="start"
+            ></com.google.android.material.navigation.NavigationView>
 
 
-        <androidx.appcompat.widget.SearchView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
 
-            android:id="@+id/search_Btn">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:titleTextColor="#FFFFFF"
+                android:layout_width="41dp"
 
-        </androidx.appcompat.widget.SearchView>
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:id="@+id/menu_btn_id"
-            android:paddingRight="15dp"
-            android:gravity="center"
 
-            android:layout_margin="5dp"
+                app:subtitleTextColor="#FFFFFF"></androidx.appcompat.widget.Toolbar>
 
-            ></ImageView>
-    </LinearLayout>
-<ListView
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="247dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:supportsRtl="true"
+                app:queryHint="Search"
+                android:id="@+id/search_view"
+                android:clickable="true"
+                android:keepScreenOn="false"
+
+
+
+
+
+                >
+
+            </androidx.appcompat.widget.SearchView>
+
+
+            <ImageView
+                android:layout_width="41dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+
+>
+
+            </ImageView>
+        </LinearLayout>
+
+
+
+    <ListView
     android:id="@+id/listView"
     android:dividerHeight="1.2sp"
-
+        android:layout_below="@+id/top"
     android:divider="#E9EDF0"
     android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="13"/>
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"/>
 
+    </androidx.drawerlayout.widget.DrawerLayout>
 </LinearLayout>

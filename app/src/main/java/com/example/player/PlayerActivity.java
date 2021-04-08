@@ -153,12 +153,15 @@ public class PlayerActivity extends AppCompatActivity {
 //        seekMusic.getThumb().setColorFilter(getResources().getColor(R.color.colorPrimary),PorterDuff.Mode.SRC_IN);
 
         //seekMusic set Listener
-        seekMusic.setOnProgressChangedListener(new ProgressListener() {
-            @Override
-            public void invoke(int i) {
-                mediaPlayer.seekTo(seekMusic.getProgress());
-            }
-        });
+
+        //PROBLEM
+        
+//        seekMusic.setOnProgressChangedListener(new ProgressListener() {
+//            @Override
+//            public void invoke(int i) {
+//                mediaPlayer.seekTo(seekMusic.getProgress());
+//            }
+//        });
 
         // time format change and set textView
         String endTime=createTime(mediaPlayer.getDuration());
